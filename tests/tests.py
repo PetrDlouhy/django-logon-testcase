@@ -10,10 +10,10 @@ Tests for `django-logon-testcase` models module.
 
 from django.test import TestCase
 
-from logon_testcase import LogonTestCaseMixin
+from logon_testcase import LogonMixin
 
 
-class TestLogonTestCaseTest(LogonTestCaseMixin, TestCase):
+class TestLogonTestCaseTest(LogonMixin, TestCase):
     def test_is_logged_on(self):
         self.assertEquals(
             str(self.client.session.get('_auth_user_id')),

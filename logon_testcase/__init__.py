@@ -3,7 +3,7 @@ __version__ = '0.1.0'
 from django.contrib.auth.hashers import make_password
 
 
-class LogonTestCaseMixin(object):
+class LogonMixin(object):
     def get_user(self):
         from django.contrib.auth.models import User
         return User.objects.create(
@@ -12,7 +12,7 @@ class LogonTestCaseMixin(object):
         )
 
     def setUp(self):
-        super(LogonTestCaseMixin, self).setUp()
+        super(LogonMixin, self).setUp()
         self.user = self.get_user()
 
         try:  # Django >= 1.9

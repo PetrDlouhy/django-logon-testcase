@@ -6,7 +6,9 @@ Use it in your tests:
 
 .. code-block:: python
 
-    from logon_testcase import LogonTestCase
+    from django.test import TestCase
 
-    class MyTestCase(LogonTestCase):
+    from logon_testcase import LogonMixin
+
+    class MyTestCase(LogonMixin, TestCase):
          ...

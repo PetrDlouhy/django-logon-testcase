@@ -5,11 +5,11 @@ Django Logon TestCase
 .. image:: https://badge.fury.io/py/django-logon-testcase.svg
     :target: https://badge.fury.io/py/django-logon-testcase
 
-.. image:: https://travis-ci.org/petr.dlouhy/django-logon-testcase.svg?branch=master
-    :target: https://travis-ci.org/petr.dlouhy/django-logon-testcase
+.. image:: https://travis-ci.org/PetrDlouhy/django-logon-testcase.svg?branch=master
+    :target: https://travis-ci.org/PetrDlouhy/django-logon-testcase
 
-.. image:: https://codecov.io/gh/petr.dlouhy/django-logon-testcase/branch/master/graph/badge.svg
-    :target: https://codecov.io/gh/petr.dlouhy/django-logon-testcase
+.. image:: https://codecov.io/gh/PetrDlouhy/django-logon-testcase/branch/master/graph/badge.svg
+    :target: https://codecov.io/gh/PetrDlouhy/django-logon-testcase
 
 Simple enhancement to the TestCase which creates user and loggs him in.
 

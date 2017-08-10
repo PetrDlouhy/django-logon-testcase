@@ -7,7 +7,6 @@ import sys
 
 import django
 from django.conf import settings
-from django.test.utils import get_runner
 
 
 def run_tests(*test_args):
@@ -15,7 +14,11 @@ def run_tests(*test_args):
         test_args = ['tests']
 
     os.environ['DJANGO_SETTINGS_MODULE'] = 'tests.settings'
-    django.setup()
+    try:
+        django.setup()
+    except AttributeError:  # Django < 1.7
+        pass
+    from django.test.utils import get_runner
     TestRunner = get_runner(settings)
     test_runner = TestRunner()
     failures = test_runner.run_tests(test_args)

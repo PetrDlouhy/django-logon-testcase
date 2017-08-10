@@ -29,10 +29,14 @@ Use it in your tests:
 
 .. code-block:: python
 
-    from logon_testcase import LogonTestCase
+    from django.test import TestCase
 
-    class MyTestCase(LogonTestCase):
+    from logon_testcase import LogonTestCaseMixin
+
+    class MyTestCase(LogonTestCaseMixin):
          ...
+
+The logged user is available in `self.user` variable.
 
 Features
 --------
@@ -41,7 +45,7 @@ You can get your own user for the test by overriding `get_user` function:
 
 .. code-block:: python
 
-    class MyTestCase(LogonTestCase):
+    class MyTestCase(LogonTestCaseMixin):
          def get_user(self):
              return User.objects.create()
 

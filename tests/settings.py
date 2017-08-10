@@ -1,5 +1,5 @@
 # -*- coding: utf-8
-from __future__ import unicode_literals, absolute_import
+from __future__ import absolute_import, unicode_literals
 
 import django
 
@@ -13,7 +13,7 @@ DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": ":memory:",
-    }
+    },
 }
 
 ROOT_URLCONF = "tests.urls"
@@ -22,7 +22,8 @@ INSTALLED_APPS = [
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sites",
-    "django_logon_testcase",
+    "django.contrib.sessions",
+    "logon_testcase",
 ]
 
 SITE_ID = 1

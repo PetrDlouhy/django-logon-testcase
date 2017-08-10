@@ -15,7 +15,10 @@ from logon_testcase import LogonTestCaseMixin
 
 class TestLogonTestCaseTest(LogonTestCaseMixin, TestCase):
     def test_is_logged_on(self):
-        self.assertEquals(self.client.session.get('_auth_user_id'), str(self.user.pk))
+        self.assertEquals(
+            str(self.client.session.get('_auth_user_id')),
+            str(self.user.pk),
+        )
 
     def test_logout(self):
         self.client.logout()
